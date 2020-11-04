@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Food")
+        if (other.gameObject.tag == "CollObject")
         {
             Debug.Log("Eaten " + other.gameObject);
             //increase mass and size

@@ -22,4 +22,11 @@ public class ObjectStateController : MonoBehaviour
     {
         return mass;
     }
+    public void changeMass(float value)
+    {
+        //changes mass & size of an object to match its mass
+        mass = value;
+        transform.localScale = new Vector3(mass, mass, mass);
+    }
+
 }
