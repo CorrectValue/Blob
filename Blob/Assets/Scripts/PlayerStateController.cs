@@ -6,6 +6,8 @@ public class PlayerStateController : MonoBehaviour
 {
 
     public float mass = 1.0f;
+    public float size = 1.0f;
+    public string name = "Blobbie";
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,8 @@ public class PlayerStateController : MonoBehaviour
     {
         //changes player's mass by value 
         mass += value;
-        transform.localScale = new Vector3(mass, mass, mass);
+        size += value * 0.1f;
+        transform.localScale = new Vector3(size, size, size);
     }
 
     public float GetMass()
@@ -32,4 +35,9 @@ public class PlayerStateController : MonoBehaviour
         return mass;
     }
 
+    public string GetName()
+    {
+        //returns blob's name
+        return name;
+    }
 }
