@@ -15,12 +15,6 @@ public class CancelButtonHandler : MonoBehaviour
         parent = gameObject.transform.parent.gameObject;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void handle()
     {
         //acts when the button is pressed

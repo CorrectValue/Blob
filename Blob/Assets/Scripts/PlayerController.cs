@@ -61,9 +61,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "CollObject")
         {
-            Debug.Log("Eaten " + other.gameObject);
-            //increase mass and size
-            script.changeMass(other.gameObject.GetComponent<ObjectStateController>().getMass());
+            //consume an object 
+            script.consume(other.gameObject.GetComponent<ObjectStateController>().getMass());
             //destroy collected object            
             Destroy(other.gameObject);
         }

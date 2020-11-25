@@ -24,6 +24,7 @@ public class DisplayPlayerInfo : MonoBehaviour
         var scr = player.GetComponent<PlayerStateController>();
 
         //set stats into text
-        parent.GetComponent<UnityEngine.UI.Text>().text = "Name: " + scr.GetName() + "\n" + "Mass: " + scr.GetMass();
+        parent.GetComponent<UnityEngine.UI.Text>().text = "Name: " + scr.GetName() + "\n" + "Mass: " + scr.GetMass() + "\n" + "Level: " + scr.GetLevel()
+            + " (" + scr.GetExp() + " exp)";
     }
 }
